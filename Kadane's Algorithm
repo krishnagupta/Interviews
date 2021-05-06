@@ -15,3 +15,16 @@ function maxSumSubArray(arr){
 }
 
 maxSumSubArray([1,2,-2,4,5,-6])
+
+
+// For all Negative Number
+
+function maxSumSubArray(arr){
+  let currsum=0,maxsum=0;
+  
+  for(let i=0;i<arr.length;i++){
+    currsum = Math.max(arr[i], currsum+arr[i]);
+    maxsum = Math.max(maxsum, currsum)
+  }
+  return maxsum;
+}
