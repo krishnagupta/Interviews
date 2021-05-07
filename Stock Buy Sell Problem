@@ -30,3 +30,29 @@ for(i=1; i<x.length; i++){
 }
 
 console.log(profit)
+
+// for min transaction with max profit
+
+let x = [5,2,6,7,1,4,5,3,5]
+
+let i, profit=0, lmin=0,lmax=0;
+
+for(i=1; i<x.length; i++){
+  if(lmax > x[i]){
+    profit += lmax-lmin;
+    lmax=0;
+    lmin=0;
+  }
+   if(x[i-1] > x[i]){
+     lmin = x[i];
+   }
+   else if(x[i-1] < x[i]) {
+     lmax = x[i];
+   }
+   console.log(lmin,lmax, profit)
+}
+
+if(lmax >0 && lmin>0){
+  profit += lmax-lmin;
+}
+console.log(profit)
