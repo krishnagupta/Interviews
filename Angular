@@ -1,0 +1,2 @@
+Q]Unable to resolve dependency tree error when installing npm packages
+Soln] npm install --save --legacy-peer-deps
