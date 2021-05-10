@@ -1,2 +1,6 @@
 Q]Unable to resolve dependency tree error when installing npm packages
 Soln] npm install --save --legacy-peer-deps
+
+Q] What happens when we load page
+Soln] index.html file is served with script which gets executed which start angular app(main.ts), there it comes to 
+know that AppComponent should be intialized and html is loaded in root.
